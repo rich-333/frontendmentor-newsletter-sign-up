@@ -18,17 +18,22 @@
     </title>
   </head>
   <body>
-    <!-- Sign-up form start -->
-    <main>
-      <article>
-        <img src="" alt="" />
+  
+    <main class="main">
+      <article class="article">
+        <picture>
+          <source class="article__img" srcset="/assets/images/illustration-sign-up-desktop.svg" media="(min-width: 1280px)" />
+          <source class="article__img" srcset="/assets/images/illustration-sign-up-tablet.svg" media="(min-width: 768px)" />
+          <source class="article__img" src="/assets/images/illustration-sign-up-mobile.svg" media="(min-width: 480px)" />
+          <img class="article__img" src="./assets/images/illustration-sign-up-mobile.svg" alt="" />
+        </picture>
         
-        <header>
-          <h1>Stay updated!</h1>
-          <p>Join 60,000+ product managers receiving monthly updates on:</p>
+        <header class="article__header">
+          <h1 class="article__title">Stay updated!</h1>
+          <p class="article__description">Join 60,000+ product managers receiving monthly updates on:</p>
         </header>
         
-        <div>
+        <div class="">
           <ul>
             <li>
               <p>
@@ -48,11 +53,11 @@
           </ul>
         </div>
         
-        <footer>
-          <form action="" method="get" accept-charset="utf-8">
-            <p>Email address</p>
-            <input type="email" name="" id="" value="" placeholder="email@company.com"/>
-            <button type="submit">
+        <footer class="article__footer">
+          <form class="footer__form" action="" method="post" accept-charset="utf-8">
+            <label class="label__email" for="email">Email address</label>
+            <input class="input__email" type="email" name="email" id="email" value="" placeholder="email@company.com"/>
+            <button class="form__button" type="submit">
               Subscribe to monthly newsletter
             </button>
           </form>
