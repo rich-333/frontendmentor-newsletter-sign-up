@@ -1,51 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./assets/images/favicon-32x32.png"
-    />
 
-    <link rel="stylesheet" href="style.css" />
-
-    <title>
-      Frontend Mentor | Newsletter sign-up form with success message
-    </title>
-  </head>
-  <body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-    <main class="main">
-      <article class="article">
-        <picture>
-          <source class="article__img" srcset="/assets/images/illustration-sign-up-desktop.svg" media="(min-width: 1280px)" />
-          <source class="article__img" srcset="/assets/images/illustration-sign-up-tablet.svg" media="(min-width: 768px)" />
-          <source class="article__img" src="/assets/images/illustration-sign-up-mobile.svg" media="(min-width: 480px)" />
-          <img class="article__img" src="./assets/images/illustration-sign-up-mobile.svg" alt="" />
-        </picture>
-        
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+  
+  <link rel="stylesheet" href="style.css" />
+  
+  <title>
+    Frontend Mentor | Newsletter sign-up form with success message
+  </title>
+</head>
+
+<body>
+  
+  <main class="main">
+    <article class="article">
+      <picture>
+        <source class="article__img" srcset="/assets/images/illustration-sign-up-desktop.svg" media="(min-width: 1280px)" />
+        <source class="article__img" srcset="/assets/images/illustration-sign-up-tablet.svg" media="(min-width: 768px)" />
+        <source class="article__img" src="/assets/images/illustration-sign-up-mobile.svg" media="(min-width: 480px)" />
+        <img class="article__img" src="./assets/images/illustration-sign-up-mobile.svg" alt="" />
+      </picture>
+      
+      <div class="article__content">
         <header class="article__header">
           <h1 class="article__title">Stay updated!</h1>
           <p class="article__description">Join 60,000+ product managers receiving monthly updates on:</p>
         </header>
         
-        <div class="">
+        <div class="container__list">
           <ul>
             <li>
+              <img src="/assets/images/icon-list.svg" />
               <p>
                 Product discovery and building what matters
               </p>
             </li>
             <li>
+              <img src="/assets/images/icon-list.svg" />
               <p>
                 Measuring to ensure updates are a success
               </p>
             </li>
             <li>
+              <img src="/assets/images/icon-list.svg" />
               <p>
                 And much more!
               </p>
@@ -56,23 +57,26 @@
         <footer class="article__footer">
           <form class="footer__form" action="" method="post" accept-charset="utf-8">
             <label class="label__email" for="email">Email address</label>
-            <input class="input__email" type="email" name="email" id="email" value="" placeholder="email@company.com"/>
+            <input class="input__email" type="email" name="email" id="email" value="" placeholder="email@company.com" />
             <button class="form__button" type="submit">
               Subscribe to monthly newsletter
             </button>
           </form>
         </footer>
-      </article>
-    </main>
-    
-    <div>
-      <h2>Thanks for subscribing!</h2>
-      <p>
-        A confirmation email has been sent to
-          ash@loremcompany.com. Please open it and click the button inside to confirm your subscription.
-      </p>
-      <button type="submit">Dismiss message</button>
-    </div>
+      </div>
+      
+    </article>
+  </main>
+  
+  <div class="container__suscribe">
+    <h2>Thanks for subscribing!</h2>
+    <p>
+      A confirmation email has been sent to
+      ash@loremcompany.com. Please open it and click the button inside to confirm your subscription.
+    </p>
+    <button type="submit">Dismiss message</button>
+  </div>
+  
+</body>
 
-  </body>
 </html>
