@@ -38,7 +38,6 @@ body {
 .article {
   max-width: 700px;
   width: 100%;
-  display: none;
 }
 
 .article__img {
@@ -107,6 +106,7 @@ body {
 
 
 .container__suscribe {
+  display: none;
   padding: 0 1.5rem;
   margin: 9rem 0 1rem;
 }
