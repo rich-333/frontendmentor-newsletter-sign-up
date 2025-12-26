@@ -1,13 +1,9 @@
 @font-face {
-  font-family: Roboto;
-  src: url(../assets/fonts/Roboto-Bold.ttf) format(ttf);
-  font-weight: 700;
-}
-
-@font-face {
-  font-family: Roboto;
-  src: url(../assets/fonts/Roboto-Regular.ttf) format(ttf);
-  font-weight: 400;
+  font-family: "Roboto";
+  src: url("./assets/fonts/Roboto-Variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
 }
 
 :root {
@@ -33,6 +29,7 @@ body {
   font-family: var(--font-primary);
   color: var(--color-Blue-700);
   font-weight: 500;
+  color: var(--color-Blue-800);
 }
 
 .article {
@@ -67,12 +64,21 @@ body {
   height: 3.5rem;
 }
 
-.container__list ul li img {
-  
-}
-
 .article__footer {
   margin-top: 2rem;
+}
+
+.label__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.error__message {
+  font-size: 0.8rem;
+  color: var(--color-Red);
+  font-weight: 500;
+  display: none;
 }
 
 .label__email {
@@ -90,6 +96,15 @@ body {
   margin-bottom: 1.5rem;
 }
 
+.input__email--error::placeholder {
+  color: var(--color-Red);
+}
+
+.input__email--error {
+  border: 1px solid var(--color-Red);
+  background-color: hsla(4, 100%, 93%, 1.00);
+}
+
 .form__button {
   width: 100%;
   height: 3.2rem;
@@ -98,17 +113,30 @@ body {
   background-color: var(--color-Blue-700);
   color: var(--color-White);
   font-weight: 700;
+  transition: all 0.3s ease-in-out;
 }
 
+.form__button:hover {
+  cursor: pointer;
+  background-image: linear-gradient(to right, hsl(4, 100%, 67%), hsl(4, 100%, 57%));
+}
 
-
+.is-hidden {
+  display: none;
+}
 
 
 
 .container__suscribe {
   display: none;
   padding: 0 1.5rem;
-  margin: 9rem 0 1rem;
+  height: 100vh;
+  justify-content: center;
+}
+
+.is-visible {
+  display: flex;
+  flex-direction: column;
 }
 
 .container__suscribe img {
@@ -130,6 +158,11 @@ body {
   line-height: 1.4;
 }
 
+.suscribe__email {
+  font-weight: 700;
+  color: var(--color-Blue-700);
+}
+
 .suscribe__button {
   width: 100%;
   border: none;
@@ -139,4 +172,52 @@ body {
   color: var(--color-White);
   border-radius: 0.5rem;
   margin-top: 20rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.suscribe__button:hover {
+  cursor: pointer;
+  background-image: linear-gradient(to right, hsl(4, 100%, 67%), hsl(4, 100%, 57%));
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--color-Blue-800);
+  }
+
+  .article {
+    display: flex;
+    flex-direction: row-reverse;
+    max-width: 900px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 2rem;
+    overflow: hidden;
+    background-color: var(--color-White);
+    padding: 1rem;
+  }
+
+  .article__img {
+    width: auto;
+    height: auto;
+  }
+
+  .article__content {
+    padding: 2.5rem 3rem;
+  }
+
+  .container__suscribe {
+    background-color: var(--color-White);
+    width: 450px;
+    height: auto;
+    padding: 3rem;
+    border-radius: 2rem;
+  }
+
+  .suscribe__button {
+    margin-top: 1rem;
+  }
 }
